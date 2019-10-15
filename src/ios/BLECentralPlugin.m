@@ -798,7 +798,7 @@
 
     CBService *service = [self findServiceFromUUID:serviceUUID p:peripheral];
 
-    if (!service)
+    /*if (!service)
     {
         NSLog(@"Could not find service with UUID %@ on peripheral with UUID %@",
               serviceUUIDString,
@@ -812,7 +812,7 @@
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 
         return nil;
-    }
+    }*/
 
     CBCharacteristic *characteristic = [self findCharacteristicFromUUID:characteristicUUID service:service prop:prop];
 
