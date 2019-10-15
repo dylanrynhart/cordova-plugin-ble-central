@@ -798,21 +798,7 @@
 
     CBService *service = [self findServiceFromUUID:serviceUUID p:peripheral];
 
-    /*if (!service)
-    {
-        NSLog(@"Could not find service with UUID %@ on peripheral with UUID %@",
-              serviceUUIDString,
-              peripheral.identifier.UUIDString);
-
-
-        NSString *errorMessage = [NSString stringWithFormat:@"Could not find service with UUID %@ on peripheral with UUID %@",
-                                  serviceUUIDString,
-                                  peripheral.identifier.UUIDString];
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:errorMessage];
-        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-
-        return nil;
-    }*/
+   
 
     CBCharacteristic *characteristic = [self findCharacteristicFromUUID:characteristicUUID service:service prop:prop];
 
